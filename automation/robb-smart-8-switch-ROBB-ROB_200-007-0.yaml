@@ -128,7 +128,7 @@ action:
     - '{{ button == 1 and cmd == "off" }}'
     sequence: !input off_button_1_short
   - conditions:
-    - '{{ button == 1 and cmd == "move_with_on_off" }}'
+    - '{{ button == 1 and (cmd == "move_with_on_off" or cmd == "move") }}'
     sequence:
     - variables:
         mode: '{{ trigger.event.data.params.move_mode }}'
@@ -144,7 +144,7 @@ action:
     - '{{ button == 2 and cmd == "off" }}'
     sequence: !input off_button_2_short
   - conditions:
-    - '{{ button == 2 and cmd == "move_with_on_off" }}'
+    - '{{ button == 2 and (cmd == "move_with_on_off" or cmd == "move") }}'
     sequence:
     - variables:
         mode: '{{ trigger.event.data.params.move_mode }}'
@@ -160,7 +160,7 @@ action:
     - '{{ button == 3 and cmd == "off" }}'
     sequence: !input off_button_3_short
   - conditions:
-    - '{{ button == 3 and cmd == "move_with_on_off" }}'
+    - '{{ button == 3 and (cmd == "move_with_on_off" or cmd == "move") }}'
     sequence:
     - variables:
         mode: '{{ trigger.event.data.params.move_mode }}'
@@ -176,7 +176,7 @@ action:
     - '{{ button == 4 and cmd == "off" }}'
     sequence: !input off_button_4_short
   - conditions:
-    - '{{ button == 4 and cmd == "move_with_on_off" }}'
+    - '{{ button == 4 and (cmd == "move_with_on_off" or cmd == "move") }}'
     sequence:
     - variables:
         mode: '{{ trigger.event.data.params.move_mode }}'
